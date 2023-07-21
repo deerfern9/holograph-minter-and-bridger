@@ -96,7 +96,7 @@ def main():
     for private in privates:
         bridge(private)
         delay = random.randint(*delay_between_wallets)
-        while delay >= 0:
+        while delay > 0:
             unix_time = time.localtime()
             if int(time.strftime("%H", unix_time)) == 0 and int(time.strftime("%M", unix_time)) in (0, 1, 2):
                 num_of_accs_today = random.randint(*num_of_accs_per_day)
